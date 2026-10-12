@@ -1,0 +1,767 @@
+@use "./../abstracts/shares" as *;
+
+#CustomerReviews {
+  background: #abbaab; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffffff, #abbaab); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  overflow: hidden;
+  position: relative;
+
+  .circles {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  > .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .circle {
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 25%, #fff8dc 0%, #f5dfa0 10%, #c49a4a 35%, #93672d 65%, #481426 100%);
+    box-shadow:
+      inset -5px -7px 12px #26071145,
+      inset 3px 3px 8px #ffffffa6,
+      0 5px 20px #c49a4a35;
+    opacity: 0.78;
+    animation: circleAnimation 4s ease-in-out infinite alternate;
+  }
+
+  .circle-1 {
+    width: 42px;
+    height: 42px;
+    top: 7%;
+    left: 5%;
+  }
+  .circle-2 {
+    width: 17px;
+    height: 17px;
+    top: 17%;
+    left: 23%;
+    animation-delay: -2s;
+  }
+  .circle-3 {
+    width: 58px;
+    height: 58px;
+    top: 10%;
+    right: 7%;
+    animation-delay: -3s;
+  }
+  .circle-4 {
+    width: 25px;
+    height: 25px;
+    top: 28%;
+    right: 18%;
+    animation-delay: -1s;
+  }
+  .circle-5 {
+    width: 13px;
+    height: 13px;
+    top: 98%;
+    left: 10%;
+    animation-delay: -4s;
+  }
+  .circle-6 {
+    width: 35px;
+    height: 35px;
+    top: 80%;
+    left: 4%;
+    animation-delay: -2s;
+  }
+  .circle-7 {
+    width: 22px;
+    height: 22px;
+    top: 62%;
+    right: 90%;
+    animation-delay: -5s;
+  }
+  .circle-8 {
+    width: 47px;
+    height: 47px;
+    top: 93%;
+    left: 15%;
+    animation-delay: -3s;
+  }
+  .circle-9 {
+    width: 16px;
+    height: 16px;
+    top: 84%;
+    right: 21%;
+    animation-delay: -1s;
+  }
+  .circle-10 {
+    width: 30px;
+    height: 30px;
+    top: 91%;
+    left: 47%;
+    animation-delay: -4s;
+  }
+  .circle-11 {
+    width: 12px;
+    height: 12px;
+    top: 50%;
+    left: 47%;
+    animation-delay: -2s;
+  }
+  .circle-12 {
+    width: 38px;
+    height: 38px;
+    top: 43%;
+    right: 4%;
+    animation-delay: -3s;
+  }
+  .circle-13 {
+    width: 20px;
+    height: 20px;
+    top: 69%;
+    left: 36%;
+    animation-delay: -5s;
+  }
+  .circle-14 {
+    width: 52px;
+    height: 52px;
+    top: 5%;
+    left: 65%;
+    animation-delay: -1s;
+  }
+  .circle-15 {
+    width: 15px;
+    height: 15px;
+    top: 56%;
+    left: 24%;
+    animation-delay: -4s;
+  }
+  .circle-16 {
+    width: 28px;
+    height: 28px;
+    top: 81%;
+    right: 5%;
+    animation-delay: -2s;
+  }
+  .circle-17 {
+    width: 10px;
+    height: 10px;
+    top: 13%;
+    left: 37%;
+    animation-delay: -3s;
+  }
+  .circle-18 {
+    width: 32px;
+    height: 32px;
+    top: 35%;
+    right: 12%;
+    animation-delay: -1s;
+  }
+  .circle-19 {
+    width: 18px;
+    height: 18px;
+    top: 93%;
+    right: 38%;
+    animation-delay: -5s;
+  }
+  .circle-20 {
+    width: 44px;
+    height: 44px;
+    top: 59%;
+    right: 34%;
+    animation-delay: -2s;
+  }
+  .title {
+    position: relative;
+
+    .info {
+      display: inline-block;
+      color: #c49a4a;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      color: #3b0b1a;
+      font-family: "Times New Roman", serif;
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+
+      span {
+        color: #c49a4a;
+        font-style: italic;
+      }
+    }
+
+    p {
+      color: #857779;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+    }
+
+    .heading-line {
+      width: 100px;
+      height: 3px;
+      background: linear-gradient(to right, transparent, #c49a4a, transparent);
+      margin: 22px auto 0;
+    }
+  }
+  .carousel-item {
+    background: linear-gradient(125deg, #260711 0%, #3b0b1a 25%, #fdfbf7 50%, #eee2cd 72%, #c49a4a 100%);
+    padding: 30px 0px;
+    border-radius: 20px;
+  }
+  .review-book {
+    min-height: 310px;
+    @include centre();
+    perspective: 1200px;
+    padding: 12px 0;
+  }
+
+  .book-toggle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+
+  .book {
+    width: 100%;
+    max-width: 260px;
+    height: 290px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      bottom: 5px;
+      right: -7px;
+      width: 12px;
+      border-radius: 0 5px 5px 0;
+      background: linear-gradient(to bottom, #e9dfce 0%, #e9dfce 15%, #fffdf8 50%, #d6c7b1 100%);
+      box-shadow: 3px 4px 6px #26071112;
+    }
+
+    .book-cover {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      transform-origin: left center;
+      transform-style: preserve-3d; /*to hide back of cover */
+      transition: 0.5s;
+      border-radius: 4px 10px 10px 4px;
+      border: 1px solid #c49a4a;
+      background: linear-gradient(110deg, #ffffff0d, transparent 35%), linear-gradient(145deg, #521426, #260711 72%);
+      box-shadow:
+        rgba(0, 0, 0, 0.19) 0px 10px 20px,
+        rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 12px;
+        border: 1px solid #c49a4a85;
+        border-radius: 2px 6px 6px 2px;
+      }
+      .cover-content {
+        position: absolute;
+        inset: 0;
+        @include centre();
+        flex-direction: column;
+        gap: 13px;
+        padding: 24px;
+        cursor: pointer;
+        text-align: center;
+        color: #fff0d3;
+        backface-visibility: hidden;
+        .cover-top {
+          position: absolute;
+          top: 30px;
+          font-size: 9px;
+          letter-spacing: 4px;
+          color: var(#e4c18a);
+        }
+
+        .cover-star {
+          color: var(#e4c18a);
+          font-size: 24px;
+          transition: 0.5s;
+        }
+
+        .cover-title {
+          font-family: "Times New Roman", serif;
+          font-size: 28px;
+          line-height: 1.2;
+          font-weight: 700;
+        }
+
+        .cover-name {
+          font-size: 9px;
+          letter-spacing: 3px;
+          color: #e4c18a;
+          margin-top: 4px;
+        }
+
+        .cover-hint {
+          position: absolute;
+          bottom: 28px;
+          font-size: 8px;
+          letter-spacing: 2px;
+          opacity: 0.8;
+        }
+      }
+
+      &.second {
+        background: linear-gradient(110deg, #ffffff, transparent 60%), #eee2cd;
+        color: #3b0b1a;
+
+        .cover-content {
+          color: #3b0b1a;
+        }
+
+        .cover-top,
+        .cover-name {
+          color: #8b6530;
+        }
+
+        .cover-star {
+          color: #3b0b1a;
+        }
+
+        .cover-hint {
+          color: #795f54;
+        }
+      }
+
+      &.cover-gold {
+        background: linear-gradient(130deg, #fff0b3 0%, #c49a4a 45%, #8e642b 100%);
+
+        .cover-content {
+          color: #32101a;
+        }
+
+        .cover-top,
+        .cover-name {
+          color: #4a1c20;
+        }
+
+        .cover-star {
+          color: #fff8e8;
+        }
+
+        .cover-hint {
+          color: #3b0b1a;
+        }
+
+        &::before {
+          border-color: #fff0b3;
+        }
+      }
+    }
+
+    .book-pages {
+      position: absolute;
+      inset: 3px 3px 3px 8px;
+      z-index: 1;
+      overflow: hidden;
+      border: 1px solid #e2d6c3;
+      border-radius: 2px 5px 5px 2px;
+      background: repeating-linear-gradient(to right, #fffdf8 0 3px, #f3eadb 3px 4px);
+      box-shadow:
+        rgba(0, 0, 0, 0.3) 0px 19px 38px,
+        rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+      .page-content {
+        position: absolute;
+        inset: 0;
+        @include centre();
+        flex-direction: column;
+        text-align: center;
+        padding: 23px 20px 17px 24px;
+        opacity: 0;
+        transform: translateX(8px);
+        transition: 0.5s;
+        .page-number {
+          font-size: 7px;
+          letter-spacing: 1.5px;
+          color: #9b825c;
+          margin-bottom: 12px;
+        }
+
+        .page-stars {
+          color: #c49a4a;
+          font-size: 15px;
+          letter-spacing: 3px;
+          margin-bottom: 6px;
+        }
+
+        h3 {
+          color: #3b0b1a;
+          font-family: "Times New Roman", serif;
+          font-size: 22px;
+          margin: 0 0 5px;
+        }
+
+        .verified {
+          color: #7a7168;
+          font-size: 9px;
+
+          i {
+            color: #3c752e;
+            margin-right: 3px;
+          }
+        }
+
+        p {
+          font-family: Georgia, serif;
+          font-size: 11px;
+          line-height: 1.5;
+          margin: 14px 0;
+        }
+
+        .page-thanks {
+          color: #99733c;
+          font-family: "Times New Roman", serif;
+          font-style: italic;
+          font-size: 13px;
+        }
+
+        .close-book {
+          margin-top: 12px;
+          color: #3b0b1a;
+          font-size: 9px;
+          cursor: pointer;
+          text-decoration: underline;
+          text-decoration-color: #c49a4a;
+          text-underline-offset: 4px; /*distance between it and text*/
+        }
+      }
+    }
+
+    &:hover {
+      .book-cover .cover-star {
+        transform: scale(1.15) rotate(-8deg);
+      }
+      .book-cover .cover-hint {
+        animation: zoom 2s infinite linear;
+      }
+    }
+  }
+
+  // Open the cover when the checkbox is checked
+  input.book-toggle:checked + .book {
+    // + بتختار العنصر اللي جاي بعده مباشرة
+    .book-cover {
+      transform: rotateY(-155deg);
+    }
+
+    .book-pages .page-content {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .reviews-controls {
+    @include centre();
+    gap: 22px;
+    margin-top: 35px;
+
+    .review-arrow {
+      position: relative;
+      width: 54px;
+      height: 46px;
+      @include centre();
+      overflow: hidden;
+      border: 1px solid #c49a4a80;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: 0.5s;
+      color: #fff0d3;
+      background: #870000; /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #190a05, #870000); /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #190a05, #870000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+      box-shadow:
+        0 4px 12px #3b0b1a08,
+        inset 0 0 0 3px #ffffff80;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -80%;
+        width: 45%;
+        height: 200%;
+        background: linear-gradient(90deg, transparent, #ffffffb8, transparent);
+        transform: skew(-25deg);
+        transition: 0.5s;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 4px;
+        border: 1px solid #c49a4a30;
+        border-radius: 3px;
+        transition: 0.5s;
+      }
+
+      i {
+        position: relative;
+        z-index: 1;
+        transition: 0.5s;
+      }
+
+      &:hover {
+        border-color: #e4c18a;
+        transform: translateY(-4px);
+        color: #3b0b1a;
+        background: #abbaab; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #ffffff, #abbaab); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        box-shadow:
+          0 9px 20px #3b0b1a25,
+          0 0 0 3px #c49a4a15;
+
+        &::before {
+          left: 140%;
+        }
+
+        &::after {
+          border-color: #c49a4a90;
+        }
+      }
+    }
+
+    .carousel-note {
+      position: relative;
+      @include centre();
+      gap: 12px;
+      color: #795f54;
+      font-family: "Times New Roman", serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        width: 25px;
+        height: 1px;
+        background: linear-gradient(to right, transparent, #c49a4a);
+      }
+    }
+  }
+}
+/* Responsive */
+#CustomerReviews {
+  @include respond(350) {
+    .title {
+      .info {
+        font-size: 9px;
+        letter-spacing: 2px;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      p {
+        font-size: 12px;
+        padding: 0 10px;
+      }
+    }
+
+    .carousel-item {
+      padding: 20px 10px;
+      border-radius: 12px;
+    }
+
+    .review-book {
+      min-height: 270px;
+      padding: 10px 0;
+    }
+
+    .book {
+      max-width: 220px;
+      height: 250px;
+
+      .book-cover {
+        .cover-content {
+          gap: 10px;
+          padding: 18px;
+
+          .cover-top {
+            top: 25px;
+            font-size: 7px;
+            letter-spacing: 2px;
+          }
+
+          .cover-star {
+            font-size: 20px;
+          }
+
+          .cover-title {
+            font-size: 23px;
+          }
+
+          .cover-name {
+            font-size: 8px;
+            letter-spacing: 2px;
+          }
+
+          .cover-hint {
+            bottom: 22px;
+            font-size: 7px;
+            letter-spacing: 1px;
+          }
+        }
+      }
+
+      .book-pages {
+        .page-content {
+          padding: 18px 14px 12px 18px;
+
+          h3 {
+            font-size: 18px;
+          }
+
+          p {
+            font-size: 10px;
+            line-height: 1.4;
+            margin: 10px 0;
+          }
+
+          .page-stars {
+            font-size: 12px;
+            letter-spacing: 2px;
+          }
+
+          .page-thanks {
+            font-size: 11px;
+          }
+        }
+      }
+    }
+
+    .reviews-controls {
+      gap: 12px;
+      margin-top: 22px;
+
+      .review-arrow {
+        width: 42px;
+        height: 40px;
+        font-size: 13px;
+      }
+
+      .carousel-note {
+        gap: 6px;
+        font-size: 8px;
+        letter-spacing: 1px;
+
+        &::before,
+        &::after {
+          width: 12px;
+        }
+      }
+    }
+
+    .circle-3,
+    .circle-8,
+    .circle-14,
+    .circle-20 {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  @include respond(450) {
+    .title {
+      h2 {
+        font-size: 2.2rem;
+      }
+    }
+
+    .review-book {
+      min-height: 290px;
+    }
+
+    .book {
+      max-width: 240px;
+      height: 270px;
+    }
+
+    .reviews-controls {
+      gap: 16px;
+
+      .review-arrow {
+        width: 48px;
+        height: 42px;
+      }
+
+      .carousel-note {
+        font-size: 9px;
+        letter-spacing: 2px;
+      }
+    }
+  }
+
+  @include respond(650) {
+    .title {
+      h2 {
+        font-size: 2.6rem;
+      }
+    }
+
+    .carousel-item {
+      padding: 25px 15px;
+    }
+
+    .review-book {
+      min-height: 310px;
+    }
+
+    .book {
+      max-width: 260px;
+      height: 290px;
+    }
+
+    .reviews-controls {
+      margin-top: 28px;
+    }
+  }
+
+  @include respond(850) {
+    .title {
+      h2 {
+        font-size: 3rem;
+      }
+    }
+
+    .carousel-item {
+      padding: 30px 20px;
+    }
+
+    .reviews-controls {
+      gap: 22px;
+
+      .review-arrow {
+        width: 55px;
+        height: 45px;
+      }
+
+      .carousel-note {
+        font-size: 11px;
+        letter-spacing: 3px;
+      }
+    }
+  }
+}

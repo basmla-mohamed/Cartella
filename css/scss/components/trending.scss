@@ -1,0 +1,384 @@
+@use "./../abstracts/shares" as *;
+
+#trending {
+  background: #eaeaeb;
+  color: #30251f;
+  overflow: hidden;
+
+  .trending-heading {
+    .text {
+      color: #a47b42;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 4px;
+    }
+
+    h2 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin: 15px 0;
+      color: $darkPink;
+
+      span {
+        color: #a47b42;
+        font-family: Georgia, serif;
+        font-style: italic;
+        font-weight: 500;
+      }
+    }
+
+    p {
+      color: #887d73;
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
+  }
+
+  .trendingExist {
+    .trend-section {
+      background: transparent;
+      border: 1px solid #e5d9c9;
+      border-radius: 30px;
+      padding: 10px 23px;
+      color: #65564a;
+      font-size: 13px;
+      transition: 0.5s;
+
+      &:hover,
+      &.active {
+        background: $darkPink;
+        color: #fffaf2;
+        border-color: $darkPink;
+      }
+    }
+  }
+
+  .trend-card {
+    height: 100%;
+    transition: 0.3s;
+    background-color: #d4cecb;
+    overflow: hidden;
+    border-radius: 15px !important;
+
+    &:hover {
+      transform: translateY(-7px);
+    }
+
+    .trend-image {
+      position: relative;
+      height: 300px;
+      overflow: hidden;
+      background: #f0e9df;
+      border-radius: 5px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 0.5s;
+      }
+
+      &:hover img {
+        transform: scale(1.07);
+      }
+
+      .trend-badge {
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        z-index: 2;
+        background: #dbd0c1;
+        color: $darkPink;
+        padding: 7px 10px;
+        font-size: 9px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .trend-wishlist {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        z-index: 2;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: #fff5f5;
+        transition: 0.3s;
+        cursor: pointer;
+        color: #b42335;
+        background-color: #fff;
+        border: 1px solid #f0d5d7;
+
+        &:hover,
+        &.active {
+          background: #b42335;
+          border: 1px solid #b42335;
+          color: #fff;
+          box-shadow: 0 4px 12px rgba(180, 35, 53, 0.22);
+          transform: scale(1.08);
+        }
+      }
+    }
+
+    .trend-info {
+      padding: 18px 18px;
+
+      .trend-category {
+        color: #a47b42;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+      }
+
+      h3 {
+        font-size: 15px;
+        font-weight: 700;
+        margin: 8px 0 15px;
+        color: $darkPink;
+      }
+
+      .trend-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .trend-price {
+          font-size: 15px;
+          color: $darkPink;
+          font-weight: 800;
+        }
+
+        .trend-add {
+          width: 34px;
+          height: 34px;
+          border: 1px solid #a18665;
+          background: transparent;
+          color: #30251f;
+          border-radius: 50%;
+          transition: 0.3s;
+          background: #c7b9a5;
+
+          &.active {
+            background: $darkPink;
+            color: #fffaf2;
+            border-color: $darkPink;
+          }
+        }
+      }
+    }
+  }
+
+  .trending-explore {
+    display: inline-block;
+    padding: 14px 28px;
+    border: 1px solid $darkPink;
+    color: $darkPink;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: rgba(180, 35, 53, 0.22);
+      position: absolute;
+      animation: floatingTwo 6s linear forwards infinite;
+      top: -10px;
+      left: -10px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: rgba(180, 35, 53, 0.5);
+      position: absolute;
+      animation: floatingTwo 3s linear forwards infinite;
+      bottom: -10px;
+      right: -10px;
+    }
+
+    &:hover {
+      background: $darkPink;
+      color: #fffaf2;
+    }
+  }
+
+  .trend-item {
+    transition: 0.3s;
+
+    &.output {
+      display: none;
+    }
+  }
+}
+
+/* responsive */
+#trending {
+  @include respond(350) {
+    .trending-heading {
+      .text {
+        font-size: 10px;
+        letter-spacing: 2px;
+      }
+
+      h2 {
+        font-size: 2rem;
+        letter-spacing: -1px;
+      }
+
+      p {
+        font-size: 12px;
+        letter-spacing: 0;
+      }
+    }
+
+    .trendingExist {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+
+      .trend-section {
+        padding: 8px 13px;
+        font-size: 11px;
+      }
+    }
+
+    .trend-card {
+      .trend-image {
+        height: 250px;
+      }
+
+      .trend-info {
+        padding: 14px;
+
+        .trend-category {
+          font-size: 9px;
+        }
+
+        h3 {
+          font-size: 13px;
+        }
+
+        .trend-bottom {
+          .trend-price {
+            font-size: 13px;
+          }
+
+          .trend-add {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+    }
+
+    .trending-explore {
+      padding: 12px 20px;
+      font-size: 11px;
+    }
+  }
+
+  @include respond(450) {
+    .trending-heading {
+      h2 {
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 13px;
+      }
+    }
+
+    .trend-card {
+      .trend-image {
+        height: 280px;
+      }
+
+      .trend-info {
+        padding: 15px;
+
+        h3 {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  @include respond(650) {
+    .trending-heading {
+      h2 {
+        font-size: 2.8rem;
+      }
+    }
+
+    .trend-card {
+      .trend-image {
+        height: 270px;
+      }
+    }
+  }
+
+  @include respond(850) {
+    .trending-heading {
+      h2 {
+        font-size: 3rem;
+      }
+    }
+
+    .trend-card {
+      .trend-image {
+        height: 280px;
+      }
+
+      .trend-info {
+        padding: 14px;
+
+        h3 {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  @include respond(1050) {
+    .trending-heading {
+      h2 {
+        font-size: 3.2rem;
+      }
+    }
+
+    .trend-card {
+      .trend-image {
+        height: 290px;
+      }
+    }
+  }
+
+  @include respond(1250) {
+    .trending-heading {
+      h2 {
+        font-size: 3.4rem;
+      }
+    }
+
+    .trend-card {
+      .trend-image {
+        height: 300px;
+      }
+    }
+  }
+}

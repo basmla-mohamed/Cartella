@@ -1,0 +1,342 @@
+/*span i navBar button*/
+@keyframes span1 {
+  0% {
+    width: 90%;
+  }
+  50% {
+    width: 45%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+/*navbar border*/
+@keyframes navbarBorder {
+  0% {
+    left: -30%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+/*popup animation*/
+@keyframes PopupAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-300px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/*home img animation*/
+@keyframes homeFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/*float home 1*/
+@keyframes floatingOne {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/*float home 2*/
+@keyframes floatingTwo {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(12px);
+  }
+}
+
+/*scroll arrow in home*/
+@keyframes scrollArrow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+/*shine effect*/
+@keyframes shine {
+  0% {
+    left: -60%;
+  }
+
+  100% {
+    left: 130%;
+  }
+}
+
+/*sale float in sales */
+@keyframes saleFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes shine {
+  to {
+    background-position: -250% center;
+  }
+}
+
+@keyframes glow {
+  to {
+    filter: drop-shadow(0 0 10px #e4c18a99);
+  }
+}
+
+@keyframes lineShine {
+  to {
+    background-position: 200% 0;
+  }
+}
+@keyframes circleAnimation {
+  from {
+    transform: translate(-10px, 0);
+  }
+
+  to {
+    transform: translate(20px, 35px);
+  }
+}
+@keyframes lineWidth {
+  to {
+    width: 40%;
+  }
+}
+@keyframes headerAnimate {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+@keyframes shine2 {
+  0%,
+  65%,
+  100% {
+    left: -120%;
+  }
+  85% {
+    left: 150%;
+  }
+}
+@keyframes headerStar {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(0.8) rotate(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2) rotate(20deg);
+  }
+}
+@keyframes alternateRotate {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes rotateBox {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes starsMove {
+  from {
+    opacity: 0.45;
+    transform: scale(0.85);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes reviewShine {
+  0%,
+  50% {
+    left: -50%;
+  }
+
+  100% {
+    left: 150%;
+  }
+}
+@keyframes saleIconFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-5deg);
+  }
+
+  50% {
+    transform: translateY(-3px) rotate(5deg);
+  }
+}
+@keyframes shineBox {
+  0%,
+  65% {
+    left: -100%;
+  }
+
+  100% {
+    left: 150%;
+  }
+}
+@keyframes categoriesFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+@keyframes iconAnimate {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+
+  50% {
+    transform: translateY(-3px) rotate(8deg);
+  }
+}
+@keyframes circleRote {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes starMove {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(0.7) rotate(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2) rotate(25deg);
+  }
+}
+
+@keyframes zoom {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+}
+@keyframes circleAnimation {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(8px, -12px, 0) scale(1.06);
+  }
+
+  100% {
+    transform: translate3d(-5px, -20px, 0) scale(0.96);
+  }
+}
+@keyframes lampGlow {
+  from {
+    opacity: 0.8;
+    filter: brightness(0.9);
+  }
+
+  to {
+    opacity: 1;
+    filter: brightness(1.7);
+  }
+}
+@keyframes starFloat {
+  from {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.35;
+  }
+
+  to {
+    transform: translateY(-12px) rotate(25deg);
+    opacity: 0.9;
+  }
+}
+@keyframes searchBoxShadow {
+  from {
+    box-shadow:
+      0 0 0 5px rgba(197, 155, 39, 0.08),
+      0 0 12px rgba(197, 155, 39, 0.2);
+  }
+
+  to {
+    box-shadow:
+      0 0 0 10px rgba(197, 155, 39, 0.15),
+      0 0 30px rgba(197, 155, 39, 0.45);
+  }
+}
+@keyframes star {
+  from {
+    opacity: 0.5;
+    transform: scale(0.8) rotate(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1.15) rotate(15deg);
+  }
+}
+
+@keyframes heart {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
