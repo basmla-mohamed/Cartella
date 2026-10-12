@@ -1,0 +1,1755 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--Meta-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Basmala Mohamed" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>Cartelle</title>
+
+    <!--Style-->
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/plugins/headAnimations.css" />
+    <link rel="stylesheet" href="css/animationPlugins.css" />
+    <link rel="stylesheet" href="css/plugins/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/plugins/owl.theme.default.css" />
+    <link rel="stylesheet" href="css/keyframes.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/index.responsive.css" />
+    <link id="favicon" rel="icon" href="./images/logo.png" />
+
+    <!--Script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+    <script src="js/plugins/headAnimations.js" defer></script>
+    <script src="./js/plugins/owl.carousel.min.js" defer></script>
+    <script src="js/bootstrap.bundle.min.js " defer></script>
+    <script src="js/wow.js" defer></script>
+    <script src="js/sweetAlert" defer></script>
+    <script src="js/categories.js" defer></script>
+    <script src="js/functions.js" defer></script>
+    <script src="./js/index.js" defer></script>
+    <script src="js/notes.js" defer></script>
+  </head>
+
+  <body>
+    <!--navBar-->
+    <nav class="navbar py-3">
+      <div class="container">
+        <!--logo-->
+        <a class="navbar-brand">
+          <img class="img-fluid" src="./images/logo.png" />
+          <span>Shop Now!</span>
+        </a>
+        <form class="d-flex rounded-5" role="search" id="search">
+          <input class="form-control rounded-5" type="search" placeholder="Search for product..." aria-label="Search" />
+          <button type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+        <!--categories-->
+        <div class="categories">
+          <button class="menuBtn" type="button">
+            Categories
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+
+          <div class="menu">
+            <div class="menuContent">
+              <div class="column">
+                <h6>Women</h6>
+                <a>Clothes</a>
+                <a href="#categorieswomanPopup">Shoes</a>
+                <a href="#categorieswomanPopup">Bags</a>
+                <a href="#categorieswomanPopup">Jewelry</a>
+                <a href="#categorieswomanPopup">Accessories</a>
+              </div>
+
+              <div class="column">
+                <h6>Men</h6>
+                <a href="#categories">T-Shirts</a>
+                <a href="#categories">Shirts</a>
+                <a href="#categories">Jeans</a>
+                <a href="#categories">Shoes</a>
+                <a href="#categories">Accessories</a>
+              </div>
+
+              <div class="column">
+                <h6>Beauty</h6>
+                <a href="#categories">Skincare</a>
+                <a href="#categories">Makeup</a>
+                <a href="#categories">Hair Care</a>
+                <a href="#categories">Fragrances</a>
+                <a href="#categories">Body Care</a>
+              </div>
+
+              <div class="column">
+                <h6>Electronics</h6>
+                <a href="#categories">Smartphones</a>
+                <a href="#categories">Laptops</a>
+                <a href="#categories">Headphones</a>
+                <a href="#categories">Smart Watches</a>
+                <a href="#categories">Cameras</a>
+              </div>
+
+              <div class="menuFeatures">
+                <div>
+                  <span>NEW COLLECTION</span>
+                  <h3>Discover<br />Your Style</h3>
+                  <a href="#categories">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--actions-->
+        <div class="nav-actions">
+          <!-- Search -->
+
+          <!-- login -->
+          <button class="nav-icon ms-lg-5" type="button" onclick="openPopup('login')">
+            <i class="fa-regular fa-user"></i>
+          </button>
+        </div>
+        <!--button-->
+        <button class="navbar-toggler d-flex justify-content-center align-items-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <!--offcanvas-->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <div class="offcanvas-brand">
+              <img src="./images/logo.png" alt="Cartelle Logo" />
+              <div>
+                <h5>Cartelle</h5>
+                <span>Shop your style</span>
+              </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <!--offcanvas body-->
+          <div class="offcanvas-body">
+            <div class="offcanvas-account">
+              <div class="account-icon">
+                <i class="fa-regular fa-user"></i>
+              </div>
+
+              <div class="account-info">
+                <span>WELCOME BACK</span>
+                <h6>Guest User</h6>
+              </div>
+
+              <button type="button" onclick="openPopup('login')">
+                Login
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#categories">categories</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#trending">Trending</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#sales">Sales</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#why">Why Shop With Us?</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#CustomerReviews">Customer Reviews</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Contact">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!--login popup-->
+    <div id="loginPopup" class="popup" data-popup-name="login" onclick="closePopup()">
+      <div class="box wow animate__animated animate__zoomIn h-100">
+        <div class="row h-100">
+          <div class="col-lg-6 h-100">
+            <div class="item h-100">
+              <div class="loginInfo h-100">
+                <div class="brand-logo">
+                  <img src="./images/logo.png" alt="" />
+                </div>
+                <span>WELCOME TO</span>
+                <h2>Cartelle</h2>
+                <p>Discover your favorite products and enjoy a smarter shopping experience.</p>
+                <div class="brand-line"></div>
+                <h3>Your style. Your choice. Your Cartelle.</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="item">
+              <div class="login-content">
+                <div class="head">
+                  <div>
+                    <span>ACCOUNT ACCESS</span>
+                    <h2>Login Now</h2>
+                  </div>
+
+                  <button type="button" class="close-login" onclick="closePopup()">
+                    <i class="fa-regular fa-circle-xmark"></i>
+                  </button>
+                </div>
+
+                <form>
+                  <div class="input-group">
+                    <i class="fa-regular fa-user"></i>
+                    <input type="text" placeholder="Enter Your Name" required />
+                  </div>
+
+                  <div class="input-group">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="Enter Your Password" required />
+                    <button type="button" class="show-password">
+                      <i class="fa-regular fa-eye"></i>
+                    </button>
+                  </div>
+
+                  <div class="input-group">
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="tel" placeholder="Enter Your Phone Number" required />
+                  </div>
+
+                  <div class="login-options">
+                    <a href="#categories">Forgot Password?</a>
+                  </div>
+
+                  <button type="submit" class="login-btn">
+                    Login
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+
+                  <div class="login">
+                    <span>OR</span>
+                  </div>
+
+                  <p class="create-account">
+                    Don't have an account?
+                    <a href="#categories">Create Account</a>
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--home-->
+    <section id="home">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="item">
+              <div class="home-content wow animate__animated animate__fadeInLeft">
+                <span class="title"> NEW COLLECTION 2026 </span>
+                <h1>Define Your <span>Style.</span></h1>
+                <p>Discover carefully selected products made to match your lifestyle, your taste, and your everyday moments.</p>
+                <div class="home-buttons">
+                  <a href="#categoriestrending" class="home-btn primary-btn">
+                    Shop Collection
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                  <a href="#sales" class="home-btn secondary-btn"> Explore Offers </a>
+                </div>
+                <div class="home-stats">
+                  <div class="stat"><span>10K+</span> <span>Happy Customers</span></div>
+                  <div class="stat-line"></div>
+                  <div class="stat"><span>500+</span> <span>Premium Products</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="item">
+              <div class="home-image wow animate__animated animate__fadeInRight">
+                <div class="image-circle">
+                  <img src="./images/mainPhoto.png" alt="" class="img-fluid main-home-image" />
+                </div>
+
+                <div class="floating-card sale-card">
+                  <div class="floating-icon"><i class="fa-solid fa-tag"></i></div>
+                  <div><span>LIMITED OFFER</span> <span>UP TO 50% OFF</span></div>
+                </div>
+                <div class="floating-card rating-card">
+                  <div class="rating-icon"><i class="fa-solid fa-star"></i></div>
+                  <div><span>4.9/5</span> <span>Customer Rating</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#categories">
+        <div class="scroll-down">
+          <span>SCROLL TO DISCOVER</span>
+          <i class="fa-solid fa-arrow-down"></i>
+        </div>
+      </a>
+    </section>
+
+    <!--categories-->
+    <section id="categories" class="categories-section">
+      <div class="container">
+        <!--title-->
+        <div class="section-heading">
+          <div class="text">
+            <span class="explore wow wow animate__animated animate__fadeInUp">EXPLORE COLLECTIONS</span>
+            <h2 class="wow wow animate__animated animate__backInLeft" data-wow-delay="0.7s">Shop by <span>Category</span></h2>
+          </div>
+
+          <a href="#" class="view-all wow wow animate__animated animate__fadeInUp" data-wow-delay="0.7s">
+            View All
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="row g-4">
+          <!-- Women -->
+          <div class="col-lg-6 wow wow animate__animated animate__fadeInDown" data-wow-delay="0.1s">
+            <div class="item">
+              <a class="category-card largeCategories" onclick="openPopup('woman')">
+                <img src="./images/woman.jfif" alt="" class="img-fluid" />
+                <div class="category-overlay"></div>
+                <div class="category-number">01</div>
+                <div class="category-content">
+                  <span>FASHION COLLECTION</span>
+                  <h3>Women</h3>
+                  <p>Discover your signature style.</p>
+
+                  <div class="category-link">
+                    Explore Collection
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Men -->
+          <div class="col-lg-6 wow wow animate__animated animate__fadeInRight" data-wow-delay="0.4s">
+            <div class="item">
+              <a class="category-card largeCategories" onclick="openPopup('men')">
+                <img src="./images/Men.jfif" alt="Men Collection" />
+
+                <div class="category-overlay"></div>
+
+                <div class="category-number">02</div>
+
+                <div class="category-content">
+                  <span>MODERN ESSENTIALS</span>
+                  <h3>Men</h3>
+                  <p>Elevate your everyday look.</p>
+
+                  <div class="category-link">
+                    Explore Collection
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Beauty -->
+          <div class="col-lg-6 col-xl-4 wow wow animate__animated animate__fadeInUp" data-wow-delay="0.7s">
+            <div class="item">
+              <a class="category-card" onclick="openPopup('beauty')">
+                <img src="./images/Beauty.webp" alt="Beauty Collection" />
+
+                <div class="category-overlay"></div>
+
+                <div class="category-number">03</div>
+
+                <div class="category-content">
+                  <span>SELF CARE</span>
+                  <h3>Beauty</h3>
+
+                  <div class="category-link">
+                    Discover
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Electronics -->
+          <div class="col-lg-6 col-xl-4 wow wow animate__animated animate__backInRight" data-wow-delay="1s">
+            <div class="item">
+              <a class="category-card" onclick="openPopup('electronics')">
+                <img src="./images/electronics.jfif" alt="Electronics Collection" />
+
+                <div class="category-overlay"></div>
+
+                <div class="category-number">04</div>
+
+                <div class="category-content">
+                  <span>SMART LIFESTYLE</span>
+                  <h3>Electronics</h3>
+
+                  <div class="category-link">
+                    Discover
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Accessories -->
+          <div class="col-lg-6 col-xl-4 wow wow animate__animated animate__rotateIn" data-wow-delay="1.3s">
+            <div class="item">
+              <a class="category-card" onclick="openPopup('accessories')">
+                <img src="./images/accessories.jfif" alt="Accessories Collection" />
+
+                <div class="category-overlay"></div>
+
+                <div class="category-number">05</div>
+
+                <div class="category-content">
+                  <span>FINISH THE LOOK</span>
+                  <h3>Accessories</h3>
+
+                  <div class="category-link">
+                    Discover
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Woman popup-->
+    <div id="womanPopup" class="popup" data-popup-name="woman" onclick="closePopup()">
+      <div class="box p-5">
+        <div class="title d-flex justify-content-between align-items-center">
+          <h2>womans</h2>
+          <i class="fa-regular fa-circle-xmark" onclick="closePopup()"></i>
+        </div>
+        <div class="row px-3 pt-2 productContainer">
+          <!--content in show woman products function-->
+        </div>
+      </div>
+    </div>
+
+    <!--men popup-->
+    <div id="menPopup" class="popup" data-popup-name="men" onclick="closePopup()">
+      <div class="box p-5">
+        <div class="title d-flex justify-content-between align-items-center">
+          <h2>Men</h2>
+          <i class="fa-regular fa-circle-xmark" onclick="closePopup()"></i>
+        </div>
+        <div class="row px-3 pt-2 productContainer">
+          <!--content in show men products function-->
+        </div>
+      </div>
+    </div>
+
+    <!--beauty popup-->
+    <div id="beautyPopup" class="popup" data-popup-name="beauty" onclick="closePopup()">
+      <div class="box p-5">
+        <div class="title d-flex justify-content-between align-items-center">
+          <h2>Beauty</h2>
+          <i class="fa-regular fa-circle-xmark" onclick="closePopup()"></i>
+        </div>
+        <div class="row px-3 pt-2 productContainer">
+          <!--content in show beauty products function-->
+        </div>
+      </div>
+    </div>
+
+    <!--electronics popup-->
+    <div id="electronicsPopup" class="popup" data-popup-name="electronics" onclick="closePopup()">
+      <div class="box p-5">
+        <div class="title d-flex justify-content-between align-items-center">
+          <h2>Electrons</h2>
+          <i class="fa-regular fa-circle-xmark" onclick="closePopup()"></i>
+        </div>
+        <div class="row px-3 pt-2 productContainer">
+          <!--content in show electronics products function-->
+        </div>
+      </div>
+    </div>
+
+    <!--accessories popup-->
+    <div id="accessoriesPopup" class="popup" data-popup-name="accessories" onclick="closePopup()">
+      <div class="box p-5">
+        <div class="title d-flex justify-content-between align-items-center">
+          <h2>Accessories</h2>
+          <i class="fa-regular fa-circle-xmark" onclick="closePopup()"></i>
+        </div>
+        <div class="row px-3 pt-2 productContainer">
+          <!--content in show accessories products function-->
+        </div>
+      </div>
+    </div>
+
+    <!--trending-->
+    <section id="trending" class="trending-section py-5">
+      <div class="container py-4">
+        <div class="trending-heading text-center mb-5">
+          <span class="text wow animate__animated animate__fadeInLeft" data-wow-duration="1s">CURATED FOR YOU</span>
+          <h2 class="wow animate__animated animate__backInDown" data-wow-duration="1s" data-wow-delay=".3s">Trending <span>This Week</span></h2>
+          <p class="wow animate__animated animate__bounce" data-wow-duration="1s" data-wow-delay=".6s">Discover the pieces everyone is talking about.</p>
+        </div>
+
+        <div class="trendingExist d-flex justify-content-center flex-wrap gap-3 mb-5">
+          <button class="trend-section active wow animate__animated animate__fadeInLeft" data-wow-duration="1s" data-filter="All">All</button>
+          <button class="trend-section wow animate__animated animate__backInRight" data-wow-duration="1s" data-filter="Women">Women</button>
+          <button class="trend-section wow animate__animated animate__backInUp" data-wow-duration="1s" data-filter="Men">Men</button>
+          <button class="trend-section wow animate__animated animate__backOutLeft" data-wow-duration="1s" data-filter="Beauty">Beauty</button>
+          <button class="trend-section wow animate__animated animate__bounceOutDown" data-wow-duration="1s" data-filter="Electronics">Electronics</button>
+          <button class="trend-section wow animate__animated animate__fadeInBottomRight" data-wow-duration="1s" data-filter="Accessories">Accessories</button>
+        </div>
+
+        <div class="row g-4 trending-products">
+          <!-- Product 1 -->
+          <div class="col-xl-3 col-md-4 col-6 trend-item wow animate__animated animate__backInLeft" data-category="Women">
+            <div class="trend-card">
+              <div class="trend-image">
+                <span class="trend-badge">TRENDING</span>
+                <button class="trend-wishlist" aria-label="Add to favorites">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+                <img src="./images/woman/clothes/images (1).jfif" />
+              </div>
+              <div class="trend-info">
+                <span class="trend-category">Women</span>
+                <h3>Elegant Collection</h3>
+                <div class="trend-bottom">
+                  <span class="trend-price">$189.99</span>
+                  <button class="trend-add" aria-label="Add to cart">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="col-xl-3 col-md-4 col-6 trend-item wow animate__animated animate__backInLeft" data-wow-delay=".3s" data-category="Men">
+            <div class="trend-card">
+              <div class="trend-image">
+                <span class="trend-badge">BESTSELLER</span>
+                <button class="trend-wishlist" aria-label="Add to favorites">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+                <img src="./images/men/accessories/images (6).jfif" alt="Men's shirt" />
+              </div>
+              <div class="trend-info">
+                <span class="trend-category">Men</span>
+                <h3>Classic Essentials</h3>
+                <div class="trend-bottom">
+                  <span class="trend-price">$215.50</span>
+                  <button class="trend-add" aria-label="Add to cart">
+                    <i class="fa-solid fa-plus addToCart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="col-xl-3 col-md-4 col-6 trend-item wow animate__animated animate__backInLeft" data-wow-delay=".6s" data-category="Beauty">
+            <div class="trend-card">
+              <div class="trend-image">
+                <span class="trend-badge">POPULAR</span>
+                <button class="trend-wishlist" aria-label="Add to favorites">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+                <img src="./images2/accessories/images (10).jfif" alt="Skincare product" />
+              </div>
+              <div class="trend-info">
+                <span class="trend-category">Beauty</span>
+                <h3>Daily Skin Ritual</h3>
+                <div class="trend-bottom">
+                  <span class="trend-price">$145.00</span>
+                  <button class="trend-add" aria-label="Add to cart">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="col-xl-3 col-md-4 col-6 trend-item wow animate__animated animate__backInLeft" data-wow-delay=".9s" data-category="Beauty">
+            <div class="trend-card">
+              <div class="trend-image">
+                <span class="trend-badge">HOT PICK</span>
+                <button class="trend-wishlist" aria-label="Add to favorites">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+                <img src="./images2/beauty/perfum/images.jfif" />
+              </div>
+              <div class="trend-info">
+                <span class="trend-category">Beauty</span>
+                <h3>Next-Level Audio</h3>
+                <div class="trend-bottom">
+                  <span class="trend-price">$129.50</span>
+                  <button class="trend-add" aria-label="Add to cart">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 5 -->
+          <div class="col-xl-3 col-md-4 col-6 trend-item wow animate__animated animate__backInLeft" data-wow-delay=".3s" data-category="Accessories">
+            <div class="trend-card">
+              <div class="trend-image">
+                <span class="trend-badge">TRENDING</span>
+                <button class="trend-wishlist" aria-label="Add to favorites">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+                <img src="./images2/accessories/images (1).jfif" alt="Fashion accessory" />
+              </div>
+              <div class="trend-info">
+                <span class="trend-category">Accessories</span>
+                <h3>Everyday Details</h3>
+                <div class="trend-bottom">
+                  <span class="trend-price">$129.99</span>
+                  <button class="trend-add" aria-label="Add to cart">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 6 -->
+          <div class="col-xl-3 col-md-4 col-6 trend-item wow animate__animated animate__backInLeft" data-wow-delay=".6s" data-category="Electronics">
+            <div class="trend-card">
+              <div class="trend-image">
+                <span class="trend-badge">TRENDING</span>
+                <button class="trend-wishlist" aria-label="Add to favorites">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+                <img src="./images2/electrons/camera/images (1).jfif" alt="Fashion accessory" />
+              </div>
+              <div class="trend-info">
+                <span class="trend-category">ELECTRONICS</span>
+                <h3>Everyday Use</h3>
+                <div class="trend-bottom">
+                  <span class="trend-price">$129.99</span>
+                  <button class="trend-add" aria-label="Add to cart">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 7 -->
+          <div class="col-xl-3 col-md-4 col-6 trend-item wow animate__animated animate__backInLeft" data-wow-delay=".9s" data-category="Beauty">
+            <div class="trend-card">
+              <div class="trend-image">
+                <span class="trend-badge">BESTSELLER</span>
+                <button class="trend-wishlist" aria-label="Add to favorites">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+                <img src="./images2/beauty/makeUp/images (1).jfif" alt="Fashion accessory" />
+              </div>
+              <div class="trend-info">
+                <span class="trend-category">Beauty</span>
+                <h3>Elegant Collection</h3>
+                <div class="trend-bottom">
+                  <span class="trend-price">$230.99</span>
+                  <button class="trend-add" aria-label="Add to cart">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 8 -->
+          <div class="col-xl-3 col-md-4 col-6 trend-item wow animate__animated animate__backInLeft" data-wow-delay="1.2s" data-category="Women">
+            <div class="trend-card">
+              <div class="trend-image">
+                <span class="trend-badge">POPULAR</span>
+                <button class="trend-wishlist" aria-label="Add to favorites">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+                <img src="./images/woman/bags/images (2).jfif" alt="Fashion accessory" />
+              </div>
+              <div class="trend-info">
+                <span class="trend-category">WOMAN</span>
+                <h3>New Collection</h3>
+                <div class="trend-bottom">
+                  <span class="trend-price">$99.99</span>
+                  <button class="trend-add" aria-label="Add to cart">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 9 -->
+          <div class="col-xl-3 col-md-4 col-6 trend-item wow animate__animated animate__backInLeft" data-wow-delay=".3s" data-category="Men">
+            <div class="trend-card">
+              <div class="trend-image">
+                <span class="trend-badge">TRENDING</span>
+                <button class="trend-wishlist" aria-label="Add to favorites">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+                <img src="./images/men/T-shirt/images (2).jfif" alt="Fashion accessory" />
+              </div>
+              <div class="trend-info">
+                <span class="trend-category">MEN</span>
+                <h3>New Collection</h3>
+                <div class="trend-bottom">
+                  <span class="trend-price">$170.50</span>
+                  <button class="trend-add" aria-label="Add to cart">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Explore Button -->
+        <div class="text-center mt-5 wow animate__animated animate__zoomIn">
+          <a href="#categories" class="trending-explore">
+            Explore All Trends
+            <i class="fa-solid fa-arrow-right ms-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!--sales-->
+    <div id="sales" class="py-5">
+      <div class="container">
+        <div class="head">
+          <img src="./images/sales.jpg" class="img-fluid" />
+          <div class="text">
+            <h5 class="wow animate__animated animate__fadeInLeft">LAST CHANCE SALE</h5>
+            <h1 class="wow animate__animated animate__fadeInLeft" data-wow-delay=".2s">End Of Session</h1>
+            <h4 class="wow animate__animated animate__fadeInLeft" data-wow-delay=".5s">Save up to 50% OFF an select Styles</h4>
+            <a href="#categories" class="wow animate__animated animate__bounceIn" data-wow-delay=".8s">SHOP NOW<i class="fa-brands fa-shopify"></i></a>
+            <a href="#categories" class="wow animate__animated animate__backInUp" data-wow-delay="1.1s">SHOP THE SALE</a>
+          </div>
+          <div class="footerOfSales">
+            <div class="row">
+              <div class="col-lg-3 wow animate__animated animate__backInDown">
+                <div class="item">
+                  <p class="first wow animate__animated animate__tada">Annual Sale Event</p>
+                </div>
+              </div>
+              <div class="col-lg-3 wow animate__animated animate__backInUp">
+                <div class="item">
+                  <ul class="list-unstyled">
+                    <li>
+                      <div class="num">0</div>
+                      <div class="date">Days</div>
+                    </li>
+                    <li>
+                      <div class="num">5</div>
+                      <div class="date">Hours</div>
+                    </li>
+                    <li>
+                      <div class="num">31</div>
+                      <div class="date">Minutes</div>
+                    </li>
+                    <li>
+                      <div class="num">21</div>
+                      <div class="date">Seconds</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-3 wow animate__animated animate__backInDown">
+                <div class="item">
+                  <p class="third">Save on all best selling and exclusive styles</p>
+                </div>
+              </div>
+              <div class="col-lg-3 wow animate__animated animate__backInUp">
+                <div class="item">
+                  <button>GET NOTIFIED</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="row">
+            <div class="col-lg-6 wow animate__animated animate__zoomIn">
+              <div class="item">
+                <h4>Save Up to</h4>
+                <div class="offer d-flex flex-row">
+                  <div class="first">
+                    <p>50</p>
+                  </div>
+                  <div class="secound d-flex flex-column">
+                    <div class="one">
+                      <p>%</p>
+                    </div>
+                    <div class="two">
+                      <p>OFF</p>
+                    </div>
+                  </div>
+                </div>
+                <h3>*On select style only.limited supply</h3>
+              </div>
+            </div>
+            <div class="col-lg-6 wow animate__animated animate__zoomIn">
+              <div class="item">
+                <h2>Last Chance Sale</h2>
+                <p>Sale ends November 30 at<i class="fa-regular fa-clock"></i> 23:59 PST | Use Code LAST</p>
+                <a>EXPLORE NOW</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--why us-->
+    <div id="why" class="py-5">
+      <div class="header mb-5">
+        <h3 class="wow animate__animated animate__fadeInRight">THE CARTELLE EXPERIENCE</h3>
+        <h2 class="h1">Why Shop With <span>Us?</span></h2>
+        <h4 class="wow wow animate__animated animate__backInLeft">Discover a world where every detail is designed around your style <i class="fa-regular fa-gem"></i> ,comfort,and confidence</h4>
+      </div>
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-lg-6 d-flex">
+            <div class="item info w-100">
+              <h3 class="wow animate__animated animate__fadeInLeft">Choose Cartelle?</h3>
+              <h4 class="wow animate__animated animate__fadeInLeft" data-wow-delay=".4s">Where Style Meets Elegance!</h4>
+              <p class="wow animate__animated animate__fadeInLeft" data-wow-delay=".8s">
+                At Cartelle, we believe shopping should be more than just a purchase — it should be an experience. Discover a carefully curated collection of fashion, beauty, and lifestyle essentials designed to match your unique style. Enjoy a seamless shopping experience, explore the latest trends, and find pieces that make every moment feel
+                special.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6 d-flex">
+            <div class="item boxes w-100">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="item">
+                    <div class="box wow animate__animated animate__zoomIn one"></div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4">
+                  <div class="item">
+                    <a href="#clients">
+                      <div class="box wow animate__animated animate__zoomIn two review-box" data-wow-delay=".3s">
+                        <i class="fa-solid fa-comments review-icon"></i>
+                        <div class="review-stars">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="review-text">CLIENT LOVE</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-lg-4">
+                  <div class="item">
+                    <div class="box wow animate__animated animate__zoomIn three" data-wow-delay=".6s"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="item">
+                    <a href="#sales">
+                      <div class="box wow animate__animated animate__zoomIn four sales-box" data-wow-delay=".9s">
+                        <i class="fa-solid fa-tags sales-icon"></i>
+                        <span class="saleText">SALE</span>
+                        <span class="saleInfo">EXCLUSIVE OFFERS</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="item">
+                    <a href="#home" class="box wow animate__animated animate__zoomIn logo" data-wow-delay="1.2s">
+                      <span class="circle circle-one"></span>
+                      <span class="circle circle-two"></span>
+
+                      <span class="star star-one">✦</span>
+                      <span class="star star-two">✧</span>
+
+                      <span class="content">
+                        <i class="fa-solid fa-gem"></i>
+                        <span class="name">Cartelle</span>
+                        <span class="caption">YOUR SIGNATURE</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-lg-4">
+                  <div class="item">
+                    <a href="#trending" class="box wow animate__animated animate__zoomIn five discover-box" data-wow-delay="1.5s">
+                      <i class="fa-solid fa-compass discover-icon"></i>
+                      <span class="discoverText">DISCOVER</span>
+                      <span class="discoverInfo">YOUR NEXT FAVORITE</span>
+                      <i class="fa-solid fa-arrow-right discover-arrow"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="item">
+                    <div class="box wow animate__animated animate__zoomIn six" data-wow-delay="1.8s"></div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="item">
+                    <a href="#categories" class="box wow animate__animated animate__zoomIn seven categories-box" data-wow-delay="2.1s">
+                      <i class="fa-solid fa-layer-group categories-icon"></i>
+                      <span class="categories-title">EXPLORE</span>
+                      <span class="categories-info">DISCOVER YOUR STYLE</span>
+                      <i class="fa-solid fa-arrow-right categories-arrow"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="item">
+                    <div class="box wow animate__animated animate__zoomIn eight" data-wow-delay="2.4s"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--customers review-->
+    <section id="CustomerReviews" class="reviews-section py-5">
+      <div class="container">
+        <div class="circles">
+          <span class="circle circle-1"></span>
+          <span class="circle circle-2"></span>
+          <span class="circle circle-3"></span>
+          <span class="circle circle-4"></span>
+          <span class="circle circle-5"></span>
+          <span class="circle circle-6"></span>
+          <span class="circle circle-7"></span>
+          <span class="circle circle-8"></span>
+          <span class="circle circle-9"></span>
+          <span class="circle circle-10"></span>
+          <span class="circle circle-11"></span>
+          <span class="circle circle-12"></span>
+          <span class="circle circle-13"></span>
+          <span class="circle circle-14"></span>
+          <span class="circle circle-15"></span>
+          <span class="circle circle-16"></span>
+          <span class="circle circle-17"></span>
+          <span class="circle circle-18"></span>
+          <span class="circle circle-19"></span>
+          <span class="circle circle-20"></span>
+        </div>
+        <!--hearer-->
+        <div class="title text-center mb-5">
+          <span class="info wow animate__animated animate__fadeInLeft">THE CARTELLE JOURNAL</span>
+          <h2 class="wow animate__animated animate__backInDown">Stories Worth <span class="wow animate__animated animate__zoomIn">Sharing</span></h2>
+          <p class="wow animate__animated animate__fadeInLeft">Real experiences, thoughtfully shared.</p>
+          <div class="heading-line"></div>
+        </div>
+
+        <!--  Carousel -->
+        <div id="reviewsCarousel" class="carousel slide">
+          <div class="carousel-inner">
+            <!-- Slide One -->
+            <div class="carousel-item active">
+              <div class="row justify-content-center g-4">
+                <!-- Book One -->
+                <div class="col-md-6 wow animate__animated animate__bounce col-lg-4">
+                  <div class="review-book">
+                    <input type="checkbox" id="reviewOne" class="book-toggle" />
+                    <!-- NOTE: we link the cover of book and closeBtn (in page) to the input by using 
+                    label,input have the same for,id -->
+                    <div class="book">
+                      <div class="book-cover">
+                        <label for="reviewOne" class="cover-content">
+                          <span class="cover-top">CARTELLE</span>
+                          <i class="fa-solid fa-star cover-star"></i>
+                          <span class="cover-title">A Lovely<br />Experience</span>
+                          <span class="cover-name">AMIRA .M</span>
+                          <span class="cover-hint">OPEN TO READ</span>
+                        </label>
+                      </div>
+
+                      <div class="book-pages">
+                        <div class="page-content">
+                          <span class="page-number">CUSTOMER STORY No. 01</span>
+                          <div class="page-stars">★★★★★</div>
+                          <h3>AMIRA .M</h3>
+                          <span class="verified">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Verified Customer
+                          </span>
+                          <p>Beautiful quality and thoughtful details. My order felt special from the moment it arrived. I truly love the elegant style and the attention to every little detail.</p>
+                          <span class="page-thanks">Thank you, Cartelle</span>
+                          <label for="reviewOne" class="close-book">
+                            <i class="fa-solid fa-book-open"></i>
+                            Close book
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Book Two -->
+                <div class="col-md-6 wow animate__animated animate__bounce col-lg-4">
+                  <div class="review-book">
+                    <input type="checkbox" id="reviewTwo" class="book-toggle" />
+
+                    <div class="book">
+                      <div class="book-cover second">
+                        <label for="reviewTwo" class="cover-content">
+                          <span class="cover-top">CARTELLE</span>
+                          <i class="fa-solid fa-heart cover-star"></i>
+                          <span class="cover-title">Made For<br />My Style</span>
+                          <span class="cover-name">BASMALA .M</span>
+                          <span class="cover-hint">OPEN TO READ</span>
+                        </label>
+                      </div>
+
+                      <div class="book-pages">
+                        <div class="page-content">
+                          <span class="page-number">CUSTOMER STORY No. 02</span>
+                          <div class="page-stars">★★★★★</div>
+                          <h3>BASMALA .M</h3>
+                          <span class="verified">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Verified Customer
+                          </span>
+                          <p>I found exactly what I was looking for. The design is beautiful, the quality is lovely, and the whole shopping experience was smooth and enjoyable.</p>
+                          <span class="page-thanks">With love, Cartelle</span>
+                          <label for="reviewTwo" class="close-book">
+                            <i class="fa-solid fa-book-open"></i>
+                            Close book
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Book Three -->
+                <div class="col-md-6 wow animate__animated animate__bounce col-lg-4">
+                  <div class="review-book">
+                    <input type="checkbox" id="reviewThree" class="book-toggle" />
+
+                    <div class="book">
+                      <div class="book-cover cover-gold">
+                        <label for="reviewThree" class="cover-content">
+                          <span class="cover-top">CARTELLE</span>
+                          <i class="fa-solid fa-gem cover-star"></i>
+                          <span class="cover-title">Little Details,<br />Big Love</span>
+                          <span class="cover-name">LINA H.</span>
+                          <span class="cover-hint">OPEN TO READ</span>
+                        </label>
+                      </div>
+
+                      <div class="book-pages">
+                        <div class="page-content">
+                          <span class="page-number">CUSTOMER STORY No. 03</span>
+                          <div class="page-stars">★★★★★</div>
+                          <h3>Lina H.</h3>
+                          <span class="verified">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Verified Customer
+                          </span>
+                          <p>Everything felt carefully selected and beautifully presented. I loved the details and how easy it was to find something that matched my personal style.</p>
+                          <span class="page-thanks">Yours, Cartelle</span>
+                          <label for="reviewThree" class="close-book">
+                            <i class="fa-solid fa-book-open"></i>
+                            Close book
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide Two -->
+            <div class="carousel-item">
+              <div class="row justify-content-center g-4">
+                <!-- Book Four -->
+                <div class="col-md-6 col-lg-4">
+                  <div class="review-book">
+                    <input type="checkbox" id="reviewFour" class="book-toggle" />
+
+                    <div class="book">
+                      <div class="book-cover">
+                        <label for="reviewFour" class="cover-content">
+                          <span class="cover-top">CARTELLE</span>
+                          <i class="fa-solid fa-feather-pointed cover-star"></i>
+                          <span class="cover-title">Simply<br />Beautiful</span>
+                          <span class="cover-name">YOUSEEF .K</span>
+                          <span class="cover-hint">OPEN TO READ</span>
+                        </label>
+                      </div>
+
+                      <div class="book-pages">
+                        <div class="page-content">
+                          <span class="page-number">CUSTOMER STORY No. 04</span>
+                          <div class="page-stars">★★★★★</div>
+                          <h3>YOUSEEF .K</h3>
+                          <span class="verified">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Verified Customer
+                          </span>
+                          <p>A lovely shopping experience with beautiful presentation. I appreciated how easy it was to browse the collection and choose my favorite items.</p>
+                          <span class="page-thanks">Best wishes, Cartelle</span>
+                          <label for="reviewFour" class="close-book">
+                            <i class="fa-solid fa-book-open"></i>
+                            Close book
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Book Five -->
+                <div class="col-md-6 col-lg-4">
+                  <div class="review-book">
+                    <input type="checkbox" id="reviewFive" class="book-toggle" />
+
+                    <div class="book">
+                      <div class="book-cover second">
+                        <label for="reviewFive" class="cover-content">
+                          <span class="cover-top">CARTELLE</span>
+                          <i class="fa-solid fa-gift cover-star"></i>
+                          <span class="cover-title">A Special<br />Little Find</span>
+                          <span class="cover-name">JANA R.</span>
+                          <span class="cover-hint">OPEN TO READ</span>
+                        </label>
+                      </div>
+
+                      <div class="book-pages">
+                        <div class="page-content">
+                          <span class="page-number">CUSTOMER STORY No. 05</span>
+                          <div class="page-stars">★★★★★</div>
+                          <h3>Jana R.</h3>
+                          <span class="verified">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Verified Customer
+                          </span>
+                          <p>The details made this order feel extra special. The collection has such a lovely style, and I enjoyed exploring all the different pieces.</p>
+                          <span class="page-thanks">Warmly, Cartelle</span>
+                          <label for="reviewFive" class="close-book">
+                            <i class="fa-solid fa-book-open"></i>
+                            Close book
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Book Six -->
+                <div class="col-md-6 col-lg-4">
+                  <div class="review-book">
+                    <input type="checkbox" id="reviewSix" class="book-toggle" />
+
+                    <div class="book">
+                      <div class="book-cover cover-gold">
+                        <label for="reviewSix" class="cover-content">
+                          <span class="cover-top">CARTELLE</span>
+                          <i class="fa-solid fa-crown cover-star"></i>
+                          <span class="cover-title">My New<br />Favorite</span>
+                          <span class="cover-name">SALMA T.</span>
+                          <span class="cover-hint">OPEN TO READ</span>
+                        </label>
+                      </div>
+
+                      <div class="book-pages">
+                        <div class="page-content">
+                          <span class="page-number">CUSTOMER STORY No. 06</span>
+                          <div class="page-stars">★★★★★</div>
+                          <h3>Salma T.</h3>
+                          <span class="verified">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Verified Customer
+                          </span>
+                          <p>I loved discovering this collection. The style feels timeless, and the experience made choosing my order enjoyable from start to finish.</p>
+                          <span class="page-thanks">Always, Cartelle</span>
+                          <label for="reviewSix" class="close-book">
+                            <i class="fa-solid fa-book-open"></i>
+                            Close book
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide Three -->
+            <div class="carousel-item">
+              <div class="row justify-content-center g-4">
+                <!-- Book Seven -->
+                <div class="col-md-6 col-lg-4">
+                  <div class="review-book">
+                    <input type="checkbox" id="reviewSeven" class="book-toggle" />
+
+                    <div class="book">
+                      <div class="book-cover">
+                        <label for="reviewSeven" class="cover-content">
+                          <span class="cover-top">CARTELLE</span>
+                          <i class="fa-solid fa-wand-magic-sparkles cover-star"></i>
+                          <span class="cover-title">A Touch of<br />Elegance</span>
+                          <span class="cover-name">MALAK .A</span>
+                          <span class="cover-hint">OPEN TO READ</span>
+                        </label>
+                      </div>
+
+                      <div class="book-pages">
+                        <div class="page-content">
+                          <span class="page-number">CUSTOMER STORY No. 07</span>
+                          <div class="page-stars">★★★★★</div>
+                          <h3>MALAK .A</h3>
+                          <span class="verified">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Verified Customer
+                          </span>
+                          <p>Every detail felt elegant and thoughtfully chosen. I loved the beautiful presentation, the quality of my order, and how special the entire experience felt.</p>
+                          <span class="page-thanks">Elegantly yours, Cartelle</span>
+                          <label for="reviewSeven" class="close-book">
+                            <i class="fa-solid fa-book-open"></i>
+                            Close book
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Book Eight -->
+                <div class="col-md-6 col-lg-4">
+                  <div class="review-book">
+                    <input type="checkbox" id="reviewEight" class="book-toggle" />
+
+                    <div class="book">
+                      <div class="book-cover second">
+                        <label for="reviewEight" class="cover-content">
+                          <span class="cover-top">CARTELLE</span>
+                          <i class="fa-solid fa-bag-shopping cover-star"></i>
+                          <span class="cover-title">My Perfect<br />Find</span>
+                          <span class="cover-name">FARIDA .N</span>
+                          <span class="cover-hint">OPEN TO READ</span>
+                        </label>
+                      </div>
+
+                      <div class="book-pages">
+                        <div class="page-content">
+                          <span class="page-number">CUSTOMER STORY No. 08</span>
+                          <div class="page-stars">★★★★★</div>
+                          <h3>FARIDA .N</h3>
+                          <span class="verified">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Verified Customer
+                          </span>
+                          <p>I found pieces that perfectly matched my style. Shopping was simple, the collection was beautiful, and my order arrived feeling like a lovely little gift.</p>
+                          <span class="page-thanks">With appreciation, Cartelle</span>
+                          <label for="reviewEight" class="close-book">
+                            <i class="fa-solid fa-book-open"></i>
+                            Close book
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Book Nine -->
+                <div class="col-md-6 col-lg-4">
+                  <div class="review-book">
+                    <input type="checkbox" id="reviewNine" class="book-toggle" />
+
+                    <div class="book">
+                      <div class="book-cover cover-gold">
+                        <label for="reviewNine" class="cover-content">
+                          <span class="cover-top">CARTELLE</span>
+                          <i class="fa-solid fa-sparkles cover-star"></i>
+                          <span class="cover-title">Beyond My<br />Expectations</span>
+                          <span class="cover-name">YARA .S</span>
+                          <span class="cover-hint">OPEN TO READ</span>
+                        </label>
+                      </div>
+
+                      <div class="book-pages">
+                        <div class="page-content">
+                          <span class="page-number">CUSTOMER STORY No. 09</span>
+                          <div class="page-stars">★★★★★</div>
+                          <h3>YARA .S</h3>
+                          <span class="verified">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Verified Customer
+                          </span>
+                          <p>Cartelle made finding something beautiful so effortless. The lovely details, timeless style, and smooth shopping experience made this order one to remember.</p>
+                          <span class="page-thanks">A little love, Cartelle</span>
+                          <label for="reviewNine" class="close-book">
+                            <i class="fa-solid fa-book-open"></i>
+                            Close book
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carousel indicators -->
+          <div class="reviews-controls d-flex justify-content-center align-items-center gap-4 mt-5">
+            <button class="review-arrow wow animate__animated animate__zoomIn" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev" aria-label="Previous reviews">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+
+            <span class="carousel-note wow animate__animated animate__zoomIn">TURN THE PAGE</span>
+
+            <button class="review-arrow wow animate__animated animate__zoomIn" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next" aria-label="Next reviews">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--contact Us-->
+    <section id="Contact" class="py-5">
+      <div class="container">
+        <div class="stars">
+          <i class="fa-solid fa-circle"></i>
+          <i class="fa-solid fa-circle"></i>
+          <i class="fa-solid fa-circle"></i>
+          <i class="fa-solid fa-circle"></i>
+          <i class="fa-solid fa-circle"></i>
+          <i class="fa-solid fa-circle"></i>
+          <i class="fa-solid fa-circle"></i>
+          <i class="fa-solid fa-circle"></i>
+          <i class="fa-solid fa-circle"></i>
+          <i class="fa-solid fa-circle"></i>
+          <i class="fa-solid fa-circle"></i>
+          <i class="fa-solid fa-circle"></i>
+          <i class="fa-solid fa-circle"></i>
+          <i class="fa-solid fa-circle"></i>
+          <i class="fa-solid fa-circle"></i>
+          <i class="fa-solid fa-circle"></i>
+          <i class="fa-solid fa-circle"></i>
+          <i class="fa-solid fa-circle"></i>
+          <i class="fa-solid fa-circle"></i>
+          <i class="fa-solid fa-circle"></i>
+          <i class="fa-solid fa-circle"></i>
+          <i class="fa-solid fa-circle"></i>
+          <i class="fa-solid fa-circle"></i>
+          <i class="fa-solid fa-circle"></i>
+        </div>
+        <div class="title wow animate__animated animate__zoomIn">
+          <span>LET'S CONNECT</span>
+          <h2>Every Great Clothes <span>Start Here</span></h2>
+          <p>Have a question or need a little help? There's a little surprise waiting for you.</p>
+        </div>
+        <div class="content">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="item">
+                <div class="lamp wow animate__animated animate__backInLeft">
+                  <!--message-->
+                  <button class="lamp-tassel" type="button">
+                    <span class="tassel-line"></span>
+                    <span class="tassel-circle"></span>
+                  </button>
+
+                  <div class="message">
+                    <span>PULL THE TASSEL</span>
+                    <basmala>Reveal your invitation</basmala>
+                  </div>
+
+                  <div class="lamp-top">
+                    <div class="lamp-lamp"></div>
+                  </div>
+                  <div class="lamp-line"></div>
+                  <div class="lamp-neck"></div>
+                  <div class="lamp-base"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="item">
+                <div class="invitation wow animate__animated animate__backInRight">
+                  <div class="card">
+                    <div class="card-tringle"></div>
+                    <div class="invitation-content">
+                      <i class="fa-solid fa-envelope-open-text"></i>
+                      <span>A SPECIAL INVITATION</span>
+                      <h3>A Little Note For You</h3>
+                      <p>Pull the tassel to reveal your experience.</p>
+                      <div class="invitation-circle">
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row form rounded-4 p-4">
+                  <div class="col-lg-7 part1">
+                    <div class="item rounded-4 px-3 py-4 part1Item">
+                      <div class="box">
+                        <div class="title">
+                          <span>YOUR EXPERIENCE STARTS HERE</span>
+                          <h2>Reverse Your Moment</h2>
+                          <p>Tell us about Your Visit,and we'll take care of the rest</p>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <div class="item">
+                              <p>Full Name</p>
+                              <input type="text" placeholder="Your Full Name" required />
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="item">
+                              <p>Email Address</p>
+                              <input type="email" placeholder="Enter Your Email" required />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <div class="item">
+                              <p>Phone Number</p>
+                              <input type="phone" placeholder="+02 000 000 0000" required />
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="item">
+                              <p>Preferred Date</p>
+                              <input type="date" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <div class="item">
+                              <p>Your Request</p>
+                              <textarea placeholder="Tell Us What you have in mind..."></textarea>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="btn w-100">Request a Booking</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-5 part2">
+                    <div class="item rounded-4 px-3 py-4 part2Item">
+                      <div class="title">
+                        <span>BEYOND THE ORDINARY</span>
+                        <h2>Stay in our world</h2>
+                        <p>Discover our latest collections,little details,and everything happening behind the scenes</p>
+                        <div class="row b mb-3">
+                          <div class="col-lg-3">
+                            <div class="item">
+                              <i class="fa-brands fa-instagram"></i>
+                            </div>
+                          </div>
+                          <div class="col-lg-7">
+                            <div class="item">
+                              <h3>Instagram</h3>
+                            </div>
+                          </div>
+                          <div class="col-lg-2">
+                            <div class="item">
+                              <a href="https://www.instagram.com/" target="_blank"><i class="fa-solid fa-share-from-square"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row b mb-3">
+                          <div class="col-lg-3">
+                            <div class="item">
+                              <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                          </div>
+                          <div class="col-lg-7">
+                            <div class="item">
+                              <h3>+20 11 5449 7718</h3>
+                            </div>
+                          </div>
+                          <div class="col-lg-2">
+                            <div class="item">
+                              <a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-solid fa-share-from-square"></i>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row b mb-3">
+                          <div class="col-lg-3">
+                            <div class="item">
+                              <i class="fa-brands fa-facebook-f"></i>
+                            </div>
+                          </div>
+                          <div class="col-lg-7">
+                            <div class="item">
+                              <h3>Facebook</h3>
+                            </div>
+                          </div>
+                          <div class="col-lg-2">
+                            <div class="item">
+                              <a href="https://www.facebbok.com/" target="_blank"><i class="fa-solid fa-share-from-square"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row b mb-3">
+                          <div class="col-lg-3">
+                            <div class="item">
+                              <i class="fa-brands fa-tiktok"></i>
+                            </div>
+                          </div>
+                          <div class="col-lg-7">
+                            <div class="item">
+                              <h3>TikTok</h3>
+                            </div>
+                          </div>
+                          <div class="col-lg-2">
+                            <div class="item">
+                              <a href="https://www.tiktok.com/" target="_blank"><i class="fa-solid fa-share-from-square"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row b mb-3">
+                          <div class="col-lg-3">
+                            <div class="item">
+                              <i class="fa-brands fa-x-twitter"></i>
+                            </div>
+                          </div>
+                          <div class="col-lg-7">
+                            <div class="item">
+                              <h3>Twitter</h3>
+                            </div>
+                          </div>
+                          <div class="col-lg-2">
+                            <div class="item">
+                              <a href="https://www.twitter.com/" target="_blank"><i class="fa-solid fa-share-from-square"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row b mb-3">
+                          <div class="col-lg-3">
+                            <div class="item">
+                              <i class="fa-brands fa-pinterest-p"></i>
+                            </div>
+                          </div>
+                          <div class="col-lg-7">
+                            <div class="item">
+                              <h3>Pinterest</h3>
+                            </div>
+                          </div>
+                          <div class="col-lg-2">
+                            <div class="item">
+                              <a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-solid fa-share-from-square"></i>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row b">
+                          <div class="col-lg-3">
+                            <div class="item">
+                              <i class="fa-brands fa-youtube"></i>
+                            </div>
+                          </div>
+                          <div class="col-lg-7">
+                            <div class="item">
+                              <h3>YouTube</h3>
+                            </div>
+                          </div>
+                          <div class="col-lg-2">
+                            <div class="item">
+                              <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-solid fa-share-from-square"></i>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--chat-->
+    <div class="live-chat" id="liveChat">
+      <button class="chat-toggle" id="chatToggle">
+        <i class="fa-regular fa-comments chat-icon"></i>
+        <i class="fa-solid fa-xmark close-icon"></i>
+        <span class="chat-notification"></span>
+      </button>
+
+      <!-- Chat Window -->
+      <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+          <div class="chat-brand">
+            <div class="chat-avatar">
+              <i class="fa-solid fa-bag-shopping"></i>
+            </div>
+
+            <div>
+              <h3>Cartelle</h3>
+              <p><span class="online-dot"></span> New Costumer</p>
+            </div>
+          </div>
+
+          <button class="chat-clear" id="clearChat" aria-label="Clear conversation">
+            <i class="fa-solid fa-rotate-left"></i>
+          </button>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+          <div class="chat-date">TODAY</div>
+
+          <div class="message-row">
+            <div class="message-avatar">
+              <i class="fa-solid fa-bag-shopping"></i>
+            </div>
+
+            <div class="message-content">
+              <span class="message-sender">Cartelle Assistant</span>
+              <div class="message-bubble">
+                Welcome to Cartelle! <i class="fa-solid fa-handshake"></i>
+                How can we help you find your perfect style today?
+              </div>
+              <span class="message-time">Just now</span>
+            </div>
+          </div>
+
+          <div class="quick-replies" id="quickReplies">
+            <button type="button">Track my order</button>
+            <button type="button">Returns & exchanges</button>
+            <button type="button">Product assistance</button>
+          </div>
+        </div>
+
+        <form class="chat-form" id="chatForm">
+          <input type="text" id="chatInput" placeholder="Write your message..." maxlength="500" required />
+          <button type="submit">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+
+        <div class="chat-footer">Crafted with care by Cartelle</div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row gy-5">
+          <!-- Brand -->
+          <div class="col-lg-4 col-md-6">
+            <a href="#home" class="footer-logo"> Cartelle<span>.</span> </a>
+            <p class="footer-description">Discover your style, express your elegance. A little luxury in every detail.</p>
+            <div class="footer-social">
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-lg-2 col-md-6">
+            <h4 class="footer-heading">Explore</h4>
+            <ul class="footer-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#categories">Categories</a></li>
+              <li><a href="#trending">Trending</a></li>
+              <li><a href="#sales">Special Offers</a></li>
+              <li><a href="#why">Why Cartelle?</a></li>
+            </ul>
+          </div>
+
+          <!-- Customer Care -->
+          <div class="col-lg-2 col-md-6">
+            <h4 class="footer-heading">Customer Care</h4>
+            <ul class="footer-links">
+              <li><a href="#Contact">Contact Us</a></li>
+              <li><a href="#Contact">Customer Support</a></li>
+              <li><a href="#Contact">Send Feedback</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <h4 class="footer-heading">A Touch Of Us</h4>
+            <p class="footer-description">Join our world and discover new collections, exclusive offers, and timeless inspiration.</p>
+            <form class="footer-form">
+              <input type="email" id="Email" placeholder="Enter your email address" required />
+              <button type="submit">
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!--star-->
+        <div class="footer-star">
+          <span>✦</span>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="footer-bottom">
+          <p>© 2026 Cartelle. All rights reserved.</p>
+
+          <p class="footer-name">
+            Crafted with <i class="fas fa-heart"></i> by
+            <span>Basmala Mohamed</span>
+          </p>
+
+          <a href="#home" class="back-to-top">
+            <i class="fas fa-arrow-up"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
